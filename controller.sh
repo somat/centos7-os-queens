@@ -788,7 +788,7 @@ TYPE=OVSBridge
 OVS_EXTRA="set bridge br-ex fail_mode=standalone"
 EOF
 
-cat >/etc/sysconfig/network-scripts/$CONTROLLER_PROVIDER_INTERFACE <<EOF
+cat >/etc/sysconfig/network-scripts/ifcfg-$CONTROLLER_PROVIDER_INTERFACE <<EOF
 DEVICE=$CONTROLLER_PROVIDER_INTERFACE
 NAME=$CONTROLLER_PROVIDER_INTERFACE
 DEVICETYPE=ovs
