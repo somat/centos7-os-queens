@@ -270,4 +270,5 @@ systemctl start neutron-openvswitch-agent.service
 
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo "Finished ..."
-echo "Dont forget to discover compute on controller ...."
+echo "Dont forget to discover compute on controller by running:"
+echo "su -s /bin/sh -c 'nova-manage cell_v2 discover_hosts --verbose' nova"
