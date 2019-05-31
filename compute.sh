@@ -43,7 +43,7 @@ systemctl start chronyd.service
 # === Install OpenStack Package
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo "Installing OpenStack Packages ..."
-yum -y install centos-release-openstack-rocky
+yum -y install centos-release-openstack-queens
 yum -y upgrade
 yum -y install python-openstackclient
 yum -y install openstack-selinux
