@@ -304,7 +304,7 @@ openstack user create --domain default --password $KEYSTONE_USER_PASS myuser
 openstack role create myrole
 openstack role add --project myproject --user myuser myrole
 
-cat >./admin-openrc <<EOF
+cat >~/admin-openrc <<EOF
 export OS_PROJECT_DOMAIN_NAME=Default
 export OS_USER_DOMAIN_NAME=Default
 export OS_PROJECT_NAME=admin
@@ -315,7 +315,7 @@ export OS_IDENTITY_API_VERSION=3
 export OS_IMAGE_API_VERSION=2
 EOF
 
-cat >./user-openrc <<EOF
+cat >~/user-openrc <<EOF
 export OS_PROJECT_DOMAIN_NAME=Default
 export OS_USER_DOMAIN_NAME=Default
 export OS_PROJECT_NAME=myproject
@@ -336,7 +336,7 @@ GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '$GLANCE_
 GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY '$GLANCE_DBPASS';
 GLANCE_QUERY
 
-. admin-openrc
+source ~/admin-openrc
 
 openstack user create --domain default --password $GLANCE_USER_PASS glance
 openstack role add --project service --user glance admin
@@ -445,8 +445,6 @@ GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY '$NOVA_DBPASS';
 GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'localhost' IDENTIFIED BY '$NOVA_DBPASS';
 GRANT ALL PRIVILEGES ON nova_cell0.* TO 'nova'@'%' IDENTIFIED BY '$NOVA_DBPASS';
 NOVA_QUERY
-
-. admin-openrc
 
 openstack user create --domain default --password $NOVA_USER_PASS nova
 openstack role add --project service --user nova admin
@@ -627,8 +625,6 @@ CREATE DATABASE neutron;
 GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY '$NEUTRON_DBPASS';
 GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '$NEUTRON_DBPASS';
 NEUTRON_QUERY
-
-. admin-openrc
 
 openstack user create --domain default --password $NEUTRON_USER_PASS neutron
 openstack role add --project service --user neutron admin
