@@ -93,3 +93,5 @@ devices {
 filter = [ \"a/sdb/\", \"r/.*/\"]
 
 "
+
+echo "Finished ...."

@@ -23,7 +23,7 @@ openstack endpoint create --region RegionOne volumev3 public http://controller:8
 openstack endpoint create --region RegionOne volumev3 internal http://controller:8776/v3/%\(project_id\)s
 openstack endpoint create --region RegionOne volumev3 admin http://controller:8776/v3/%\(project_id\)s
 
-yum install openstack-cinder crudini
+yum -y install openstack-cinder crudini
 
 cat >/etc/cinder/cinder.conf <<EOF
 [DEFAULT]
@@ -87,3 +87,5 @@ systemctl enable openstack-cinder-api.service openstack-cinder-scheduler.service
 systemctl start openstack-cinder-api.service openstack-cinder-scheduler.service
 
 openstack volume service list
+
+echo "Finished ....."
