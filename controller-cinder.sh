@@ -85,3 +85,5 @@ crudini --set /etc/nova/nova.conf cinder os_region_name RegionOne
 systemctl restart openstack-nova-api.service
 systemctl enable openstack-cinder-api.service openstack-cinder-scheduler.service
 systemctl start openstack-cinder-api.service openstack-cinder-scheduler.service
+
+openstack volume service list
