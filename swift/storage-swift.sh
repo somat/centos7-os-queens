@@ -47,7 +47,7 @@ EOF
 systemctl enable rsyncd.service
 systemctl start rsyncd.service
 
-yum-y install openstack-swift-account openstack-swift-container openstack-swift-object
+yum -y install openstack-swift-account openstack-swift-container openstack-swift-object
 
 cat >/etc/swift/account-server.conf <<EOF
 [DEFAULT]
