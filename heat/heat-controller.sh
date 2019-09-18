@@ -31,7 +31,7 @@ openstack role create heat_stack_owner
 openstack role add --project demo --user demo heat_stack_owner
 openstack role create heat_stack_user
 
-yum install -y openstack-heat-api openstack-heat-api-cfn openstack-heat-engine
+yum install -y openstack-heat-api openstack-heat-api-cfn openstack-heat-engine openstack-heat-ui
 
 cat >/etc/heat/heat.conf <<EOF
 [DEFAULT]
