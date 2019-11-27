@@ -9,3 +9,12 @@ Install OpenStack Queens on CentOS 7
 4. run storage-cinder.sh to install cinder on storage node
 5. run heat-controller.sh to install heat service on controller
 6. to install swift, check swift/README.md
+
+## Verify installation
+
+```
+# . admin-openrc
+# openstack compute service list
+# openstack catalog list
+# openstack network agent list
+```
