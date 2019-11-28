@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# === Define variable ===
+# === START EDIT ===
+# === END EDIT ===
+
 cat >/etc/swift/swift.conf <<EOF
 [swift-hash]
 swift_hash_path_suffix = rahasia

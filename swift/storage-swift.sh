@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# === Define variable ===
+# === START EDIT ===
+
 STORAGE_DEVICE_1=vdb
 STORAGE_DEVICE_2=vdc
 STORAGE_MGMT_IP_ADDR=10.100.0.5
@@ -11,6 +14,8 @@ mkfs.xfs /dev/$STORAGE_DEVICE_2
 
 mkdir -p /srv/node/$STORAGE_DEVICE_1
 mkdir -p /srv/node/$STORAGE_DEVICE_2
+
+# === END EDIT ===
 
 echo "/dev/$STORAGE_DEVICE_1 /srv/node/$STORAGE_DEVICE_1 xfs noatime,nodiratime,nobarrier,logbufs=8 0 2" >> /etc/fstab
 echo "/dev/$STORAGE_DEVICE_2 /srv/node/$STORAGE_DEVICE_2 xfs noatime,nodiratime,nobarrier,logbufs=8 0 2" >> /etc/fstab

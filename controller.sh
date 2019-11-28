@@ -5,6 +5,7 @@ echo "=== Install and Setup OpenStack Queens CentOS 7 on Controller Node ==="
 yum -y update
 
 # == Define variable ==
+# === START EDIT ===
 CONTROLLER_PROVIDER_INTERFACE=eth1
 CONTROLLER_MGMT_ADDR=10.100.0.5
 COMPUTE1_MGMT_ADDR=10.100.0.6
@@ -27,6 +28,8 @@ NOVA_PLACEMENT_PASS=rahasia
 NEUTRON_DBPASS=rahasia
 NEUTRON_USER_PASS=rahasia
 METADATA_USER_PASS=rahasia
+
+# === END EDIT ===
 
 echo "Controller IP ADDR = $CONTROLLER_MGMT_ADDR"
 echo "Compute 1 IP ADDR = $COMPUTE1_MGMT_ADDR"

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# == Define variable
+# == Define variable ===
+# === START EDIT ===
+
 LVM_PHYSICAL_VOLUME=/dev/vdb
 
 RABBIT_PASS=rahasia
@@ -9,6 +11,9 @@ CINDER_USER_PASS=rahasia
 
 STORAGE_MGMT_ADDR=10.100.0.5
 
+# === END EDIT ===
+
+# Install packages
 yum -y install lvm2 device-mapper-persistent-data
 
 systemctl enable lvm2-lvmetad.service

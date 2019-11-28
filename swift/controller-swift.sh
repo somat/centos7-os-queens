@@ -1,4 +1,11 @@
+#!/bin/bash
+
+# === Define variable ===
+# === START EDIT ===
+
 SWIFT_USER_PASS=rahasia
+
+# === END EDIT ===
 
 . admin-openrc
 

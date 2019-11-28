@@ -1,10 +1,17 @@
+#!/bin/bash
+
+# === Define variable ===
+# === START EDIT ===
+
 CONTROLLER_MGMT_ADDR=10.100.0.5
 MYSQL_PASS=rahasia
 CINDER_DBPASS=rahasia
 CINDER_USER_PASS=rahasia
 RABBIT_PASS=rahasia
 
+# === END EDIT ===
 
+# Install packages
 mysql -uroot -p$MYSQL_PASS <<CINDER_QUERY
 CREATE DATABASE cinder;
 GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'@'localhost' IDENTIFIED BY '$CINDER_DBPASS';

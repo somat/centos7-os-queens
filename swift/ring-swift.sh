@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# === Define variable ===
+# === START EDIT ===
+
 STORAGE_1_DEVICE_1=vdb
 STORAGE_1_DEVICE_2=vdc
 
@@ -8,6 +11,8 @@ STORAGE_2_DEVICE_2=vdc
 
 CONTROLLER_MGMT_ADDR=10.100.0.5
 STORAGE_MGMT_IP_ADDR=10.100.0.5
+
+# === END EDIT ===
 
 # Perform these steps on the controller node.
 

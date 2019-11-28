@@ -1,9 +1,16 @@
+#!/bin/bash
+
+# === Define variable ===
+# === START EDIT ===
+
 MYSQL_PASS=rahasia
 HEAT_DBPASS=rahasia
 HEAT_USER_PASS=rahasia
 HEAT_DOMAIN_USER_PASS=rahasia
 RABBIT_PASS=rahasia
 TRUSTEE_PASS=rahasia
+
+# === END EDIT ===
 
 mysql -uroot -p$MYSQL_PASS <<HEAT_QUERY
 CREATE DATABASE heat;
