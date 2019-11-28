@@ -14,8 +14,8 @@ yum -y install lvm2 device-mapper-persistent-data
 systemctl enable lvm2-lvmetad.service
 systemctl start lvm2-lvmetad.service
 
-pvcreate LVM_PHYSICAL_VOLUME
-vgcreate cinder-volumes LVM_PHYSICAL_VOLUME
+pvcreate $LVM_PHYSICAL_VOLUME
+vgcreate cinder-volumes $LVM_PHYSICAL_VOLUME
 
 yum -y install openstack-cinder targetcli python-keystone
 
